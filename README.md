@@ -4,7 +4,7 @@
 [![](https://img.shields.io/github/actions/workflow/status/soenneker/soenneker.extensions.documents.named/codeql.yml?label=CodeQL&style=for-the-badge)](https://github.com/soenneker/soenneker.extensions.documents.named/actions/workflows/codeql.yml)
 
 # ![](https://user-images.githubusercontent.com/4441470/224455560-91ed3ee7-f510-4041-a8d2-3fc093025112.png) Soenneker.Extensions.Documents.Named
-A collection of helpful NamedDocument extension methods.
+Projects an `INamedDocument` down to the `Id` and `Name` fields commonly needed by selectors and API responses.
 
 ## Installation
 
@@ -12,15 +12,16 @@ A collection of helpful NamedDocument extension methods.
 dotnet add package Soenneker.Extensions.Documents.Named
 ```
 
-## Quick start
+## Usage
 
 ```csharp
 using Soenneker.Extensions.Documents.Named;
 
-// Given an existing T named value:
-var result = value.ToIdNamePair();
+INamedDocument document = GetDocument();
+IdNamePair pair = document.ToIdNamePair();
+
+// pair.Id == document.Id
+// pair.Name == document.Name
 ```
 
-## Common operations
-
-- `ToIdNamePair()` - Creates an `IdNamePair` from an `INamedDocument`'s Id and Name. Returns a new `IdNamePair` containing the document's Id and Name.
+`ToIdNamePair()` always creates a new `IdNamePair`; later changes to the document are not reflected in the pair. Passing null throws `ArgumentNullException`.
