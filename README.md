@@ -4,7 +4,7 @@
 [![](https://img.shields.io/github/actions/workflow/status/soenneker/soenneker.extensions.documents.named/codeql.yml?label=CodeQL&style=for-the-badge)](https://github.com/soenneker/soenneker.extensions.documents.named/actions/workflows/codeql.yml)
 
 # ![](https://user-images.githubusercontent.com/4441470/224455560-91ed3ee7-f510-4041-a8d2-3fc093025112.png) Soenneker.Extensions.Documents.Named
-Projects an `INamedDocument` down to the `Id` and `Name` fields commonly needed by selectors and API responses.
+Extension methods for projecting and transforming documents that implement `INamedDocument`, especially when callers need compact identity and display data.
 
 ## Installation
 
