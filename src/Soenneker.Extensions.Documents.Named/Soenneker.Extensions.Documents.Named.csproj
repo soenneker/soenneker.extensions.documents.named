@@ -45,7 +45,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Soenneker.Documents.Named" Version="11.0.2805" />
+        <PackageReference Include="Soenneker.Documents.Named" Version="11.0.2806" />
         <PackageReference Include="Soenneker.Dtos.IdNamePair" Version="11.0.746" />
     </ItemGroup>
 </Project>
